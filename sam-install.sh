@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x sam-install.sh
+
 echo "Starting setup"
 sudo apt-get update -y
 
