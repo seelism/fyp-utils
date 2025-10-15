@@ -13,7 +13,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
 # Add current user to docker group
-sudo groupadd docker
+sudo groupadd -f docker
 sudo usermod -aG docker $USER
 newgrp docker
 
