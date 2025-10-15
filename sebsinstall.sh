@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e  # Exit immediately if a command exits with a non-zero status
-set -o pipefail  # Fail if any command in a pipeline fails
 
 # Move to home directory
 cd ~
