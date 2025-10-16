@@ -31,11 +31,11 @@ sudo apt install -y python3-venv jq  # added jq as it's used later
 . python-venv/bin/activate
 
 # Build Docker images for Node.js 20 runtime
-./tools/build_docker_images.py --deployment local --type run --language nodejs --language-version 20
+./tools/build_docker_images.py --deployment local --type run --language python --language-version 3.11
 
 # Tag the Docker image
-docker tag spcleth/serverless-benchmarks:run.local.nodejs.20-1.2.0 \
-           spcleth/serverless-benchmarks:run.local.nodejs.20
+docker tag spcleth/serverless-benchmarks:run.local.python.3.11-1.2.0 \
+           spcleth/serverless-benchmarks:run.local.python.3.11
 
 # Start storage services
 ./sebs.py storage start all config/storage.json --output-json out_storage.json
