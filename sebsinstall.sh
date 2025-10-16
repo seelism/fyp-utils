@@ -11,9 +11,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
 # Add current user to docker group
-sudo groupadd -f docker
-sudo usermod -aG docker $USER
-newgrp docker
+sudo chmod 666 /var/run/docker.sock
 
 # -------------------------------
 # Clone serverless-benchmarks repo
